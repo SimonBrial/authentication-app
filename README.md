@@ -12,9 +12,12 @@ Challenge: Create an Authentication app. Use any front-end libraries of your cho
     - Background light = #FFFFFF
     - Background dark = #252329
     - Border login = #BDBDBD
+    - Login icons = ##828282
     - Btn Login = #2F80ED
     - Register link = #2D9CDB
     - Log out link = #EB5757
     
 
 Icon: https://google.github.io/material-design-icons/
+
+Info Google register: https://morioh.com/p/bdc9c986c423

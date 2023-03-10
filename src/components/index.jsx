@@ -1,2 +1,9 @@
 export { LoginForm } from './LoginForm';
 export { AccountRegister } from './AccountRegister';
+export { LoginContainer } from './LoginContainer';
+export { Creator } from './Creator';
+export { PersonalInfo } from './PersonalInfo';
+export { InfoContainer } from './InfoContainer';
+export { Header } from './Header';
+export { Dropdown } from './Dropdown';
+export { DropItem } from './DropItem';
