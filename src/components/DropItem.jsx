@@ -2,12 +2,18 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
-const DropItem = ({ icon, text, color, padding }) => {
+const DropItem = ({ icon, text, color, padding, display, border }) => {
 
     const DropItemContainer = styled.div`
     //border: 1px solid #E0E0E0;
         padding: ${props => props.padding};
         width: 12rem;
+        display: ${props => props.display};
+
+        @media only screen and (max-width: 375px) {
+            display: ${props => (props.display = 'none') ? 'block' : 'none'};
+            border-bottom: ${props => props.border ? props.border : '0'};
+        }
     `;
 
     const DropDiv = styled.div`
@@ -33,7 +39,7 @@ const DropItem = ({ icon, text, color, padding }) => {
     `;
 
     return (
-        <DropItemContainer padding={padding}>
+        <DropItemContainer padding={padding} display={display} border={border}>
             <DropDiv color={color}>
                 <FontAwesomeIcon icon={icon} className='iconDrop' />
                 <p>{text}</p>

@@ -7,3 +7,5 @@ export { InfoContainer } from './InfoContainer';
 export { Header } from './Header';
 export { Dropdown } from './Dropdown';
 export { DropItem } from './DropItem';
+export { ChangeInfo } from './ChangeInfo';
+export { ChangeInfoContainer } from './ChangeInfoContainer';

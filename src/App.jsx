@@ -4,7 +4,9 @@ import {
   LoginContainer,
   PersonalInfo,
   Creator,
-  InfoContainer
+  InfoContainer,
+  ChangeInfo,
+  ChangeInfoContainer
 } from './components/index';
 
 function App() {
@@ -18,18 +20,16 @@ function App() {
     height: 100%;
     width: 100%;
     display: flex;
-    margin: auto 0;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   `
 
   return (
     <GlobalContainer>
       <Container>
-        {/* <LoginContainer /> */}
-        <InfoContainer />
-        <Creator />
+        <LoginContainer />
+        {/* <InfoContainer /> */}
+        {/* <ChangeInfoContainer /> */}
       </Container>
     </GlobalContainer>
   )

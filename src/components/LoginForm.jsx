@@ -1,13 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Creator } from './index'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 
 const LoginForm = () => {
 
+    const ContainerLogin = styled.div`
+        border: 1px solid #BDBDBD;
+        border-radius: 15px;
+        width: 280px;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (max-width: 375px) {
+            border: none;
+            padding-bottom: 1rem;
+        }
+
+        form {
+            width: 100%;
+        }
+    `;
+
     const DivInput = styled.div`
         position: relative;
         margin: 0.5rem 0;
+        width: 83%;
     `;
 
     const InputGeneral = styled.input.attrs(props => ({
@@ -23,7 +43,7 @@ const LoginForm = () => {
             outline: none;
         },
         input {
-            width: 13rem;
+            width: 100%;
             position: relative;
             padding: 0.5rem 2.1rem;
             border-radius: 5px;
@@ -88,37 +108,39 @@ const LoginForm = () => {
 
     return (
         <div>
-            <div>
-                <img src='../../src/img/devchallenges.svg' />
-                <DescriptionStyled fontSize={'15px'} fontWeight={'bold'} letterSpacing={'-1px'}>
-                    Join thousands of learners from around the world
+            <ContainerLogin>
+                <div>
+                    <img src='../../src/img/devchallenges.svg' />
+                    <DescriptionStyled fontSize={'15px'} fontWeight={'bold'} letterSpacing={'-1px'}>
+                        Join thousands of learners from around the world
+                    </DescriptionStyled>
+                    <DescriptionStyled fontSize={'13px'} fontWeight={300} letterSpacing={'-1px'}>
+                        Master web development by making real life projects. There are multiple paths for you to choose
+                    </DescriptionStyled>
+                </div>
+                <form>
+                    <DivInput>
+                        <FontAwesomeIcon icon={faEnvelope} style={FontAwesomeIconStyles} />
+                        <InputGeneral type={'email'} placeholder={'Email'} />
+                    </DivInput>
+                    <DivInput>
+                        <FontAwesomeIcon icon={faLock} style={FontAwesomeIconStyles} />
+                        <InputGeneral type='password' placeholder='Password' />
+                    </DivInput>
+                    <BtnLogin>Start coding now</BtnLogin>
+                </form>
+                <DescriptionStyled fontSize={'12px'} fontWeight={300} letterSpacing={'0px'} style={{ textAlign: 'center' }}>
+                    or continue with these social profile</DescriptionStyled>
+                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <BtnSocial svgIcon={'../../src/img/Facebook.svg'} />
+                    <BtnSocial svgIcon={'../../src/img/Gihub.svg'} />
+                    <BtnSocial svgIcon={'../../src/img/Google.svg'} />
+                    <BtnSocial svgIcon={'../../src/img/Twitter.svg'} />
+                </div>
+                <DescriptionStyled fontSize={'12px'} fontWeight={300} letterSpacing={'0px'} style={{ textAlign: 'center', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    Adready a member? <Span><a>Login</a></Span>
                 </DescriptionStyled>
-                <DescriptionStyled fontSize={'13px'} fontWeight={300} letterSpacing={'-1px'}>
-                    Master web development by making real life projects. There are multiple paths for you to choose
-                </DescriptionStyled>
-            </div>
-            <form>
-                <DivInput>
-                    <FontAwesomeIcon icon={faEnvelope} style={FontAwesomeIconStyles} />
-                    <InputGeneral type={'email'} placeholder={'Email'} />
-                </DivInput>
-                <DivInput>
-                    <FontAwesomeIcon icon={faLock} style={FontAwesomeIconStyles} />
-                    <InputGeneral type='password' placeholder='Password' />
-                </DivInput>
-                <BtnLogin>Start coding now</BtnLogin>
-            </form>
-            <DescriptionStyled fontSize={'12px'} fontWeight={300} letterSpacing={'0px'} style={{ textAlign: 'center' }}>
-                or continue with these social profile</DescriptionStyled>
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                <BtnSocial svgIcon={'../../src/img/Facebook.svg'} />
-                <BtnSocial svgIcon={'../../src/img/Gihub.svg'} />
-                <BtnSocial svgIcon={'../../src/img/Google.svg'} />
-                <BtnSocial svgIcon={'../../src/img/Twitter.svg'} />
-            </div>
-            <DescriptionStyled fontSize={'12px'} fontWeight={300} letterSpacing={'0px'} style={{ textAlign: 'center', display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
-                Adready a member? <Span><a>Login</a></Span>
-            </DescriptionStyled>
+            </ContainerLogin>
         </div>
     )
 }
