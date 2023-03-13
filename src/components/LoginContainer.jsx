@@ -1,19 +1,21 @@
 import React from 'react';
-import { LoginForm, AccountRegister } from './index';
+import { LoginForm, Creator } from './index';
 import styled from 'styled-components';
 
 const LoginContainer = () => {
     const Container = styled.div`
-        width: 280px;
-        padding: 3rem;
-        border: 1px solid #BDBDBD;
-        border-radius: 15px
+        width: 380px;
+        display: flex;
+        padding-top: 3rem;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
     `
 
     return (
         <Container>
             <LoginForm />
-            {/* <AccountRegister /> */}
+            <Creator />
         </Container>
     )
 }

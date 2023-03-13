@@ -9,12 +9,23 @@ const Header = () => {
         align-items: center;
         justify-content: space-between;
 
+        @media only screen and (max-width: 375px) {
+            width: 375px;
+            padding: 0 2rem;
+            justify-content: center;
+            
+        }
+
         span {
-            margin-left: -7rem;
+            //margin-left: -7rem;
+            @media only screen and (max-width: 375px) {
+                width: 375px;
+                margin-left: 2.5rem;
+            }
         }
 
         div {
-            margin-right: -2rem;
+            margin-right: -1rem;
         }
 
     `;
