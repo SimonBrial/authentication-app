@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Creator } from './index'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 
 const LoginForm = () => {

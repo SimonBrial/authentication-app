@@ -13,7 +13,6 @@ function App() {
 
   const GlobalContainer = styled.div`
     font-family: 'Open Sans', sans-serif;
-    
   `;
 
   const Container = styled.div`
@@ -27,9 +26,9 @@ function App() {
   return (
     <GlobalContainer>
       <Container>
-        <LoginContainer />
+        {/* <LoginContainer /> */}
         {/* <InfoContainer /> */}
-        {/* <ChangeInfoContainer /> */}
+        <ChangeInfoContainer />
       </Container>
     </GlobalContainer>
   )
